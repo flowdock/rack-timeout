@@ -33,6 +33,10 @@ Or use a proc for a dynamic timeout:
 
     Rack::Timeout.timeout = proc{|env| env["REQUEST_PATH"].start_with?("/admin") ? 15 : 5 }
 
+Or use a proc for a dynamic timeout:
+
+    Rack::Timeout.timeout = proc{|env| env["REQUEST_PATH"].start_with?("/admin") ? 15 : 5 }
+
 ### Sinatra and other Rack apps
 
 ```ruby
